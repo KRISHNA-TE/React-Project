@@ -11,6 +11,7 @@ function App() {
 
   //UseRef Hook
   const passwordRef = useRef(null);
+
   // Used for memorizing of an function as much as possible
   const passwordGenertor = useCallback(() => {
     let pass = "";
@@ -29,6 +30,7 @@ function App() {
     //Used for better usage of the UI and Range
     passwordRef.current?.select();
     passwordRef.current?.setSelectionRange(0, 51);
+    //Main code for coping the text
     window.navigator.clipboard.writeText(password);
   }, [password]);
 
@@ -40,7 +42,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-orange-400 bg-gray-700">
+      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-orange-400 bg-sky-400">
         <h1 className="text-center my-3">Password Generator</h1>
         <div className="flex shadow rounded-lg overflow-hidden mb-4">
           <input
@@ -83,7 +85,7 @@ function App() {
             />
             <label htmlFor="numberInput">Numbers</label>
           </div>
-          <div className="flex items-center gap-x-1">
+          <div className="flex items-center gap-x-1 ">
             <input
               type="checkbox"
               defaultChecked={charAllowed}

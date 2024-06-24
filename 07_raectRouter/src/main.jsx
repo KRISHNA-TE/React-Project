@@ -13,7 +13,7 @@ import Home from "./component/Home/Home.jsx";
 import About from "./component/About/About.jsx";
 import Contact from "./component/Contact/Contact.jsx";
 import User from "./User/User.jsx";
-import Github, { githubInfoLoader } from "./Github/Github.jsx";
+import Github, { githubInfoLoader } from "./component/Github/Github.jsx";
 
 /* Creation of routers where we can nvigate from one page to Another */
 // const router = createBrowserRouter([
